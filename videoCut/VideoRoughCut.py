@@ -7,6 +7,7 @@ import sys
 
 inputFileDir = sys.argv[1]
 outputFileDir = sys.argv[2]
+samplingTime = int(sys.argv[3])
 
 print("inputFileDir  : " + inputFileDir)
 print("outputFileDir : " + outputFileDir)
@@ -17,7 +18,7 @@ for videoName in os.listdir(inputFileDir):
 for videoName in videoList:
 
     video = cv2.VideoCapture(inputFileDir + "\\" + videoName);
-
+    time = 1
     # # Find OpenCV version
     major_ver = (cv2.__version__).split('.')[0]
     if int(major_ver) < 3:
@@ -27,7 +28,7 @@ for videoName in videoList:
         fps = video.get(cv2.CAP_PROP_FPS)
         print videoName,"Frames per second using video.get(cv2.CAP_PROP_FPS) : {0}".format(fps)
 
-    c = 1
+
     print("Starting  processing " + videoName + " ...")
     rval, img = video.read()
 
@@ -44,15 +45,16 @@ for videoName in videoList:
             print(videoName," processing finished !")
             video.release()
 
-
+        video.set(cv2.cv.CV_CAP_PROP_POS_MSEC, time * 1000)  # 设置时间标记
         rval, img = video.read()
 
-        c = c + 1
+
+        time += samplingTime
 
         cv2.waitKey(1)
 
+    video.release()
 
-os.system("pause")
 
 
 

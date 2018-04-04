@@ -1,1 +1,1 @@
-python VideoRoughCut.py d:\inputVideo d:\PICTURE
+python VideoRoughCut.py d:\inputVideo d:\PICTURE 1
