@@ -1,0 +1,1 @@
+python VideoRoughCut.py d:\inputVideo d:\PICTURE

@@ -4,7 +4,6 @@
 import os
 import cv2
 import sys
-from pictureDiff import *
 
 inputFileDir = sys.argv[1]
 outputFileDir = sys.argv[2]
@@ -52,8 +51,8 @@ for videoName in videoList:
 
         cv2.waitKey(1)
 
-    video.release()
 
+os.system("pause")
 
 
 
