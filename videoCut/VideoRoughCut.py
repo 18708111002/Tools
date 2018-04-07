@@ -88,7 +88,7 @@ def handleImage(img):
 inputFileDir = sys.argv[1]
 outputFileDir = sys.argv[2]
 samplingTime = int(sys.argv[3])
-degree = int(sys.argv[4])
+
 startTime = int(sys.argv[5])
 
 
@@ -99,50 +99,51 @@ for videoName in os.listdir(inputFileDir):
     videoList.append(videoName)
 
 for videoName in videoList:
+    degree = int(sys.argv[4])
+    while degree >= 100:
+        video = cv2.VideoCapture(inputFileDir + "\\" + videoName);
+        if video.isOpened():
+            time = startTime
+            # # Find OpenCV version
+            major_ver = (cv2.__version__).split('.')[0]
+            if int(major_ver) < 3:
+                fps = video.get(cv2.cv.CV_CAP_PROP_FPS)
+                # print videoName,"Frames per second using video.get(cv2.cv.CV_CAP_PROP_FPS): {0}".format(fps)
+            else:
+                fps = video.get(cv2.CAP_PROP_FPS)
+                # print videoName,"Frames per second using video.get(cv2.CAP_PROP_FPS) : {0}".format(fps)
 
-    video = cv2.VideoCapture(inputFileDir + "\\" + videoName);
-    if video.isOpened():
-        time = startTime
-        # # Find OpenCV version
-        major_ver = (cv2.__version__).split('.')[0]
-        if int(major_ver) < 3:
-            fps = video.get(cv2.cv.CV_CAP_PROP_FPS)
-            print videoName,"Frames per second using video.get(cv2.cv.CV_CAP_PROP_FPS): {0}".format(fps)
-        else:
-            fps = video.get(cv2.CAP_PROP_FPS)
-            print videoName,"Frames per second using video.get(cv2.CAP_PROP_FPS) : {0}".format(fps)
 
-
-        print("Starting  processing " + videoName + " ...")
-        rval, img = video.read()
-        print(img)
-
-        while rval:  # 循环读取视频帧
-            imageVar = cv2.Laplacian(img, cv2.CV_64F).var() #拉普拉斯判断模糊度
-
-            face_cascade = cv2.CascadeClassifier(r'.\haarcascade_frontalface_alt.xml')
-            grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            # 人脸检测，1.2和2分别为图片缩放比例和需要检测的有效点数
-            faces = face_cascade.detectMultiScale(grey, scaleFactor=1.2, minNeighbors=3, minSize=(32, 32))
-
-            if(imageVar > degree and (len(faces) > 0) ):
-                img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-                img = handleImage(img)
-                img = cv2.cvtColor(numpy.asarray(img), cv2.COLOR_RGB2BGR)
-                cv2.imwrite(outputFileDir + "\\" + videoName.split(".")[0] + '.jpg', img)  # 存储为图像
-
-                print(videoName," processing finished !")
-                video.release()
-
-            video.set(cv2.cv.CV_CAP_PROP_POS_MSEC, time * 1000)  # 设置时间标记
+            print("Starting  processing " + videoName + " ...")
             rval, img = video.read()
 
+            while rval :  # 循环读取视频帧
+                imageVar = cv2.Laplacian(img, cv2.CV_64F).var() #拉普拉斯判断模糊度
 
-            time += samplingTime
+                face_cascade = cv2.CascadeClassifier(r'.\haarcascade_frontalface_alt.xml')
+                grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                # 人脸检测，1.2和2分别为图片缩放比例和需要检测的有效点数
+                faces = face_cascade.detectMultiScale(grey, scaleFactor=1.2, minNeighbors=3, minSize=(32, 32))
 
-            cv2.waitKey(1)
+                if(imageVar > degree and (len(faces) > 0) ):
+                    img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+                    img = handleImage(img)
+                    img = cv2.cvtColor(numpy.asarray(img), cv2.COLOR_RGB2BGR)
+                    cv2.imwrite(outputFileDir + "\\" + videoName.split(".")[0] + '.jpg', img)  # 存储为图像
 
-        video.release()
+                    print(videoName," processing finished !")
+                    degree = 0
+                    video.release()
+
+                video.set(cv2.cv.CV_CAP_PROP_POS_MSEC, time * 1000)  # 设置时间标记
+                rval, img = video.read()
+
+
+                time += samplingTime
+
+                cv2.waitKey(1)
+            degree -= 100
+            video.release()
 
 
 

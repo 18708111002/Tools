@@ -1,1 +1,1 @@
-python VideoRoughCut.py d:\inputVideo d:\PICTURE 1 300 60 
+python VideoRoughCut.py d:\inputvideo d:\outputvideo D:\ffmpeg\bin\ffmpeg
