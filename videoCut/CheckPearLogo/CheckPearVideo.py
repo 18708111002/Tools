@@ -97,15 +97,16 @@ for videoName in videoList:
     if video.isOpened():
         if time >= videoTime:
             meanMatch = getMeanMatch(video)
-            if( meanMatch > 3):
+            if( meanMatch > 1):
 
                 print(videoName + " has left-top Logo will move to " + outputFileDir)
-                cmd = "move " + inputFileDir + "\\" + videoName + "  " + outputFileDir + "\\"
+                cmd = "move " + '"' + inputFileDir + "\\" + videoName + '"  ' + outputFileDir + "\\"
                 # print(cmd)
                 # os.system(cmd)
                 moveVedioCmd.append(cmd)
         else:
-            cmd = "move " + inputFileDir + "\\" + videoName + "  " + outputFileDir + "\\"
+            cmd = "move " + '"' + inputFileDir + "\\" + videoName + '"  ' + outputFileDir + "\\"
+            print(cmd)
             # print(cmd)
             # os.system(cmd)
             moveVedioCmd.append(cmd)

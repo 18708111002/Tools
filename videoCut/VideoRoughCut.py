@@ -6,7 +6,7 @@ import cv2
 import sys
 import numpy
 from PIL import Image
-
+import random
 def getLeftTopArea(img):
 
     rect = (15, 20, 100, 50)
@@ -99,49 +99,75 @@ for videoName in os.listdir(inputFileDir):
     videoList.append(videoName)
 
 for videoName in videoList:
+    import time as pyTime
+    print("Starting  processing " + videoName + " ...")
+
+    time_start = int(pyTime.time())
     degree = int(sys.argv[4])
-    while degree >= 100:
-        video = cv2.VideoCapture(inputFileDir + "\\" + videoName);
-        if video.isOpened():
+
+    video = cv2.VideoCapture(inputFileDir + "\\" + videoName);
+    frameCount = video.get(cv2.cv.CV_CAP_PROP_FRAME_COUNT)
+    fps = video.get(cv2.cv.CV_CAP_PROP_FPS)
+    maxTime = frameCount / fps
+
+    randTime = random.randint(int(startTime),int(maxTime))
+    video.set(cv2.cv.CV_CAP_PROP_POS_MSEC, randTime * 1000)  # 设置时间标记
+    rval, img = video.read()
+    cv2.imwrite(outputFileDir + "\\" + videoName.split(".")[0] + '.png', img)  # 存储为图像
+
+    if video.isOpened():
+
+        while degree >= 100:
             time = startTime
             # # Find OpenCV version
             major_ver = (cv2.__version__).split('.')[0]
-            if int(major_ver) < 3:
-                fps = video.get(cv2.cv.CV_CAP_PROP_FPS)
-                # print videoName,"Frames per second using video.get(cv2.cv.CV_CAP_PROP_FPS): {0}".format(fps)
-            else:
-                fps = video.get(cv2.CAP_PROP_FPS)
-                # print videoName,"Frames per second using video.get(cv2.CAP_PROP_FPS) : {0}".format(fps)
 
-
-            print("Starting  processing " + videoName + " ...")
-            rval, img = video.read()
+            rval = True
+            img  = None
 
             while rval :  # 循环读取视频帧
-                imageVar = cv2.Laplacian(img, cv2.CV_64F).var() #拉普拉斯判断模糊度
 
-                face_cascade = cv2.CascadeClassifier(r'.\haarcascade_frontalface_alt.xml')
-                grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-                # 人脸检测，1.2和2分别为图片缩放比例和需要检测的有效点数
-                faces = face_cascade.detectMultiScale(grey, scaleFactor=1.2, minNeighbors=3, minSize=(32, 32))
+                if time < maxTime:
+                    video.set(cv2.cv.CV_CAP_PROP_POS_MSEC, time * 1000)  # 设置时间标记
+                    rval, img = video.read()
+                else:
+                    break
 
-                if(imageVar > degree and (len(faces) > 0) ):
-                    img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-                    img = handleImage(img)
-                    img = cv2.cvtColor(numpy.asarray(img), cv2.COLOR_RGB2BGR)
-                    cv2.imwrite(outputFileDir + "\\" + videoName.split(".")[0] + '.jpg', img)  # 存储为图像
+                imageVar = cv2.Laplacian(img, cv2.CV_64F) #拉普拉斯判断模糊度
+                if imageVar is not None:
+                    imageVar = imageVar.var()
+                    face_cascade = cv2.CascadeClassifier(r'.\haarcascade_frontalface_alt.xml')
+                    grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                    # 人脸检测，1.2和2分别为图片缩放比例和需要检测的有效点数
+                    faces = face_cascade.detectMultiScale(grey, scaleFactor=1.2, minNeighbors=3, minSize=(32, 32))
+                else:
+                    imageVar = 0
+                    facess = 0
+
+
+
+                time_end = int(pyTime.time())
+
+                if ((time_end - time_start) > 20 ):
+                    print(videoName," processing over 20s")
+                    cv2.imwrite(outputFileDir + "\\" + videoName.split(".")[0] + '.png', img)  # 存储为图像
+                    degree = 0
+                    # video.release()
+                    break
+                    print(videoName, " processing finished !")
+
+                elif (imageVar > degree and len(faces) > 0):
+
+                    cv2.imwrite(outputFileDir + "\\" + videoName.split(".")[0] + '.png', img)  # 存储为图像
 
                     print(videoName," processing finished !")
                     degree = 0
-                    video.release()
-
-                video.set(cv2.cv.CV_CAP_PROP_POS_MSEC, time * 1000)  # 设置时间标记
-                rval, img = video.read()
-
+                    # video.release()
+                    break
 
                 time += samplingTime
-
                 cv2.waitKey(1)
+
             degree -= 100
             video.release()
 
