@@ -1,3 +1,4 @@
+# coding=utf-8
 from ffmpy import FFmpeg
 import ffmpy
 import subprocess
@@ -6,6 +7,7 @@ import os
 import cv2
 import ConfigParser
 import string, os, sys
+from SqliteOperator import *
 
 def removeVideoLogo(ffmpegPath,input,output,delogo):
     ff = FFmpeg(ffmpegPath,
@@ -23,38 +25,36 @@ def removeVideoLogo(ffmpegPath,input,output,delogo):
 
 cf = ConfigParser.ConfigParser()
 cf.read("config.conf")
-
+sections = cf.sections()
 resolutionConfig = {}
+bias = int(20)
 
-resolutionConfig['360P'] = {}
-resolutionConfig['360P']['x'] = cf.get("360P", "x")
-resolutionConfig['360P']['y'] = cf.get("360P", "y")
-resolutionConfig['360P']['w'] = cf.get("360P", "w")
-resolutionConfig['360P']['h'] = cf.get("360P", "h")
+conn = sqlite3.connect('processedVideo')
+table = 'processedVideo'
+fields = ('videoName', 'successful')
+conn.text_factory=str
 
-resolutionConfig['480P'] = {}
-resolutionConfig['480P']['x'] = cf.get("480P", "x")
-resolutionConfig['480P']['y'] = cf.get("480P", "y")
-resolutionConfig['480P']['w'] = cf.get("480P", "w")
-resolutionConfig['480P']['h'] = cf.get("480P", "h")
+if not db_has_table(conn, table):
+    db_create_table(conn, table, fields, 'videoName')
 
-resolutionConfig['504P'] = {}
-resolutionConfig['504P']['x'] = cf.get("504P", "x")
-resolutionConfig['504P']['y'] = cf.get("504P", "y")
-resolutionConfig['504P']['w'] = cf.get("504P", "w")
-resolutionConfig['504P']['h'] = cf.get("504P", "h")
+for sec in sections:
+    resolutionConfig[sec] = {}
+    resolutionConfig[sec]['x'] = cf.get(sec, "x")
+    resolutionConfig[sec]['y'] = cf.get(sec, "y")
+    resolutionConfig[sec]['w'] = cf.get(sec, "w")
+    resolutionConfig[sec]['h'] = cf.get(sec, "h")
+    resolutionConfig[sec]['width'] = cf.get(sec, "width")
+    resolutionConfig[sec]['height'] = cf.get(sec, "height")
 
-resolutionConfig['720P'] = {}
-resolutionConfig['720P']['x'] = cf.get("720P", "x")
-resolutionConfig['720P']['y'] = cf.get("720P", "y")
-resolutionConfig['720P']['w'] = cf.get("720P", "w")
-resolutionConfig['720P']['h'] = cf.get("720P", "h")
+def isCorrectFormat(bias,height,resolutionConfig):
+    for resolution in resolutionConfig.keys():
+        h = int(resolutionConfig[resolution]['height'])
+        height = int(height)
+        if height <= (h + bias) and height >= (h - bias):
+            return resolution,True
 
-resolutionConfig['1080P'] = {}
-resolutionConfig['1080P']['x'] = cf.get("1080P", "x")
-resolutionConfig['1080P']['y'] = cf.get("1080P", "y")
-resolutionConfig['1080P']['w'] = cf.get("1080P", "w")
-resolutionConfig['1080P']['h'] = cf.get("1080P", "h")
+    return None,False
+
 
 inputFileDir = sys.argv[1]
 outputFileDir = sys.argv[2]
@@ -63,31 +63,46 @@ ffmpegPath = sys.argv[3]
 print("inputFileDir  : " + inputFileDir)
 print("outputFileDir : " + outputFileDir)
 
-videoList = []
-for videoName in os.listdir(inputFileDir):
-    videoList.append(videoName)
 
-for videoName in videoList:
-    input = inputFileDir + "\\" + videoName
-    output = outputFileDir + "\\" + videoName
 
-    video = cv2.VideoCapture(inputFileDir + "\\" + videoName);
-    if video.isOpened():
-        resolution = str(int(video.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT))) + "P"
+while True:
+    videoList = []
 
-        if resolutionConfig.has_key(resolution):
-            video.release()
-            print(videoName + " is " + resolution + " start removing watermark...")
-            x = resolutionConfig[resolution]['x']
-            y = resolutionConfig[resolution]['y']
-            w = resolutionConfig[resolution]['w']
-            h = resolutionConfig[resolution]['h']
-            delogo = "delogo=x=" + x + ":y=" + y + ":w=" + w + ":h=" + h
+    for videoName in os.listdir(inputFileDir):
+        # videoName = unicode(videoName)
+        if db_table_get_count(conn, table, ('videoName=?', [videoName])) == 0:
+            videoList.append(videoName)
 
-            removeVideoLogo(ffmpegPath,input,output,delogo)
-        else:
-            video.release()
-            print(videoName + " Video resolution error! shoule be (360P/480P/504P/720P/1080P)")
+    for videoName in videoList:
+        input = inputFileDir + "\\" + videoName
+        output = outputFileDir + "\\" + videoName
+
+        video = cv2.VideoCapture(inputFileDir + "\\" + videoName);
+        if video.isOpened():
+            resolution,correct = isCorrectFormat(bias,video.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT),resolutionConfig)
+            if correct:
+                video.release()
+                print(videoName + " is " + resolution + " start removing watermark...")
+                x = resolutionConfig[resolution]['x']
+                y = resolutionConfig[resolution]['y']
+                w = resolutionConfig[resolution]['w']
+                h = resolutionConfig[resolution]['h']
+                delogo = "delogo=x=" + x + ":y=" + y + ":w=" + w + ":h=" + h
+
+                removeVideoLogo(ffmpegPath,input,output,delogo)
+
+                rows = [fields]
+                rows.append((videoName, 'successful'))
+                db_table_add_rows(conn, table, rows, ['videoName'])
+            else:
+                video.release()
+                print(videoName + " Video resolution error! shoule be (360P/480P/504P/720P/1080P)")
+                rows = [fields]
+                rows.append((videoName, 'fail'))
+                db_table_add_rows(conn, table, rows, ['videoName'])
+
+        cmd = "del " + '"' + inputFileDir + "\\" + videoName + '"  '
+        os.system(cmd)
 
 
     # print("delogo=x=" + x + ":y=" + y + ":w=" + ":h=" + h)

@@ -1,0 +1,1 @@
+python code.py 1 99 http://v.qq.com/x/list/fun?&offset= output.txt

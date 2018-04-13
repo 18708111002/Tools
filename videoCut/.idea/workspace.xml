@@ -11,24 +11,50 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/videoCut$youku_crawler.coverage" NAME="youku_crawler Coverage Results" MODIFIED="1522918739419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/videoCut$VideoRoughCut__1_.coverage" NAME="VideoRoughCut (1) Coverage Results" MODIFIED="1523189617927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/videoCut$VideoRoughCut__1_.coverage" NAME="VideoRoughCut (1) Coverage Results" MODIFIED="1523194352282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/videoCut$CheckPearVideo.coverage" NAME="CheckPearVideo Coverage Results" MODIFIED="1522942023030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/videoCut$koutu.coverage" NAME="koutu Coverage Results" MODIFIED="1522927992792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/videoCut$VideoRoughCut.coverage" NAME="VideoRoughCut Coverage Results" MODIFIED="1522916689227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/videoCut$RemoveBlackBorder.coverage" NAME="RemoveBlackBorder Coverage Results" MODIFIED="1522835246642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/videoCut$CheckPearVideo__1_.coverage" NAME="CheckPearVideo (1) Coverage Results" MODIFIED="1523067466477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CheckPearLogo" />
+    <SUITE FILE_PATH="coverage/videoCut$pc.coverage" NAME="pc Coverage Results" MODIFIED="1523406045833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/videoCut$quan.coverage" NAME="quan Coverage Results" MODIFIED="1523604646904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VideoRoughCut.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VideoRoughCut.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VideoRoughCut.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="144" column="30" lean-forward="true" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
+            <state relative-caret-position="1895">
+              <caret line="176" column="26" lean-forward="false" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="26" />
               <folding>
                 <element signature="e#38#47#0" expanded="true" />
-                <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+                <element signature="e#4632#4905#0" expanded="false" />
+                <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pc.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2295">
+              <caret line="91" column="13" lean-forward="false" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+              <folding>
+                <element signature="e#15#24#0" expanded="true" />
+                <marker date="1523406045818" expanded="true" signature="3145:3224" ph="INSERT INTO dongman_table... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python27/Lib/site-packages/PIL/Image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70281">
+              <caret line="2607" column="0" lean-forward="false" selection-start-line="2607" selection-start-column="0" selection-end-line="2607" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -36,33 +62,20 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/1494736245/cv2/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
+            <state relative-caret-position="49383">
               <caret line="1829" column="4" lean-forward="false" selection-start-line="1829" selection-start-column="4" selection-end-line="1829" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckPearVideo.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CheckPearVideo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CheckPearLogo/CheckPearVideo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="92" column="59" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="59" />
+            <state relative-caret-position="27">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="10" />
               <folding>
                 <element signature="e#14#24#0" expanded="true" />
-                <marker date="1523086769938" expanded="true" signature="1735:1878" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemoveBlackBorder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RemoveBlackBorder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,6 +103,8 @@
         <option value="$PROJECT_DIR$/koutu.py" />
         <option value="$PROJECT_DIR$/CheckPearVideo.py" />
         <option value="$PROJECT_DIR$/VideoRoughCut.py" />
+        <option value="$PROJECT_DIR$/pc.py" />
+        <option value="$PROJECT_DIR$/quan.py" />
       </list>
     </option>
   </component>
@@ -99,7 +114,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-12" />
     <option name="width" value="1460" />
     <option name="height" value="920" />
@@ -137,7 +152,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CheckPearLogo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -151,7 +166,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.VideoRoughCut (1)">
+  <component name="RunManager" selected="Python.quan">
     <configuration name="CheckPearVideo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -209,7 +224,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="koutu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -222,13 +237,13 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="videoCut" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\GithubTools\videoCut\CheckPearVideo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="youku_crawler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="quan" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -241,26 +256,26 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="videoCut" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/youku_crawler.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quan.py" />
+      <option name="PARAMETERS" value="D:\inputvideo D:\outputvideo" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.VideoRoughCut (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.youku_crawler" />
-      <item index="2" class="java.lang.String" itemvalue="Python.koutu" />
-      <item index="3" class="java.lang.String" itemvalue="Python.CheckPearVideo" />
-      <item index="4" class="java.lang.String" itemvalue="Python.CheckPearVideo (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.CheckPearVideo" />
+      <item index="2" class="java.lang.String" itemvalue="Python.CheckPearVideo (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.quan" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pc" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.VideoRoughCut (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.CheckPearVideo (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.CheckPearVideo" />
-        <item index="3" class="java.lang.String" itemvalue="Python.koutu" />
-        <item index="4" class="java.lang.String" itemvalue="Python.youku_crawler" />
+        <item index="0" class="java.lang.String" itemvalue="Python.quan" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pc" />
+        <item index="2" class="java.lang.String" itemvalue="Python.VideoRoughCut (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.CheckPearVideo (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.CheckPearVideo" />
       </list>
     </recent_temporary>
   </component>
@@ -281,21 +296,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="0" width="1460" height="920" extended-state="0" />
+    <frame x="-12" y="0" width="1460" height="920" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30357143" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5510204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34214285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35142857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39808482" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39923468" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -304,6 +320,28 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44515306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35142857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39923468" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -320,7 +358,7 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -331,7 +369,6 @@
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="e#14#24#0" expanded="true" />
-            <marker date="1523086769938" expanded="true" signature="1735:1878" ph="..." />
           </folding>
         </state>
       </provider>
@@ -341,7 +378,7 @@
         <state relative-caret-position="1512">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -352,7 +389,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -363,7 +401,6 @@
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="e#14#24#0" expanded="true" />
-            <marker date="1523086769938" expanded="true" signature="1735:1878" ph="..." />
           </folding>
         </state>
       </provider>
@@ -373,39 +410,7 @@
         <state relative-caret-position="1512">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VideoRoughCut.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CheckPearLogo/CheckPearVideo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#24#0" expanded="true" />
-            <marker date="1523086769938" expanded="true" signature="1735:1878" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RemoveBlackBorder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -416,7 +421,8 @@
           <caret line="138" column="40" lean-forward="true" selection-start-line="137" selection-start-column="16" selection-end-line="138" selection-end-column="40" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -427,7 +433,6 @@
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <element signature="e#14#24#0" expanded="true" />
-            <marker date="1523086769938" expanded="true" signature="1735:1878" ph="..." />
           </folding>
         </state>
       </provider>
@@ -437,7 +442,7 @@
         <state relative-caret-position="2240">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -448,7 +453,8 @@
           <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -458,7 +464,7 @@
         <state relative-caret-position="2240">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -469,7 +475,6 @@
           <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="e#14#24#0" expanded="true" />
-            <marker date="1523086769938" expanded="true" signature="1735:1878" ph="..." />
           </folding>
         </state>
       </provider>
@@ -480,7 +485,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -490,7 +496,7 @@
         <state relative-caret-position="2240">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -501,7 +507,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -511,7 +518,7 @@
         <state relative-caret-position="2240">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -522,7 +529,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -532,7 +540,7 @@
         <state relative-caret-position="2240">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -543,7 +551,8 @@
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -553,7 +562,7 @@
         <state relative-caret-position="1512">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -565,7 +574,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -575,7 +585,7 @@
         <state relative-caret-position="1512">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -596,7 +606,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -606,7 +617,7 @@
         <state relative-caret-position="1512">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -627,7 +638,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -642,7 +654,7 @@
         <state relative-caret-position="1512">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -663,7 +675,8 @@
           <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
           <folding>
             <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>
@@ -673,7 +686,7 @@
         <state relative-caret-position="1215">
           <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -703,42 +716,71 @@
     <entry file="file://$PROJECT_DIR$/temple.jpg" />
     <entry file="file://$PROJECT_DIR$/pictureDiff.py" />
     <entry file="file://$PROJECT_DIR$/CheckPearVideo.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/1494736245/cv2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49383">
+          <caret line="1829" column="4" lean-forward="false" selection-start-line="1829" selection-start-column="4" selection-end-line="1829" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="91" column="13" lean-forward="false" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+            <marker date="1523406045818" expanded="true" signature="3145:3224" ph="INSERT INTO dongman_table... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python27/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70281">
+          <caret line="2607" column="0" lean-forward="false" selection-start-line="2607" selection-start-column="0" selection-end-line="2607" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="132" column="55" lean-forward="false" selection-start-line="132" selection-start-column="55" selection-end-line="132" selection-end-column="55" />
+          <folding>
+            <element signature="e#38#47#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoRoughCut.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1895">
+          <caret line="176" column="26" lean-forward="false" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="26" />
+          <folding>
+            <element signature="e#38#47#0" expanded="true" />
+            <element signature="e#4632#4905#0" expanded="false" />
+            <marker date="1523194312263" expanded="true" signature="569:636" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RemoveBlackBorder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
+        <state relative-caret-position="442">
           <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CheckPearLogo/CheckPearVideo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="92" column="59" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="59" />
+        <state relative-caret-position="27">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="10" />
           <folding>
             <element signature="e#14#24#0" expanded="true" />
-            <marker date="1523086769938" expanded="true" signature="1735:1878" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/1494736245/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="1829" column="4" lean-forward="false" selection-start-line="1829" selection-start-column="4" selection-end-line="1829" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VideoRoughCut.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="144" column="30" lean-forward="true" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
-          <folding>
-            <element signature="e#38#47#0" expanded="true" />
-            <marker date="1523189582091" expanded="true" signature="569:636" ph="..." />
           </folding>
         </state>
       </provider>

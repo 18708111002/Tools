@@ -1,0 +1,1 @@
+python statisticsVideo.py d:\inputvideo 30

@@ -1,29 +1,22 @@
-# encoding=utf-8
-import jieba
+#encoding:utf-8
+import re
+import os
 
-import synonyms
-# for str in synonyms.display("人脸"):
-#     for i in str:
-#         print(i)
-# print("识别: %s" % (synonyms.nearby("识别")))
-# print("NOT_EXIST: %s" % (synonyms.nearby("NOT_EXIST")))
-with open(r'title.txt','r') as f:
-    for line in f:
-        seg_list = jieba.cut(line)
-        print(",".join(seg_list))
+List =[]
 
+for videoName in os.listdir('d:\inputvideo'):
+    List.append(re.split(u'@|!|\.|,|，|-|\?|_|？|！|。', videoName))
+    print(List)
 
-        # ...more code
-
-
-# seg_list = jieba.cut("我来到北京清华大学", cut_all=True)
-# print("Full Mode: " + "/ ".join(seg_list))  # 全模式
+# rule = rule[:-1]
+# List =[]
+# with open('LIST.TXT','r') as f:
+#     for line in f:
+#         List.append(re.split(u'@|!|\.|,|，|-|\?|_|？|！|。',line))
 #
-# seg_list = jieba.cut("我来到北京清华大学", cut_all=False)
-# print("Default Mode: " + "/ ".join(seg_list))  # 精确模式
-#
-# seg_list = jieba.cut("他来到了网易杭研大厦")  # 默认是精确模式
-# print(", ".join(seg_list))
-#
-# seg_list = jieba.cut_for_search("小明硕士毕业于中国科学院计算所，后在日本京都大学深造")  # 搜索引擎模式
-# print(", ".join(seg_list))
+# with open('modify.txt','w') as f:
+#     for line in List:
+#         for word in line:
+#             # f.write(line[0])
+#             f.write(word + "          ")
+#         f.write('\n')

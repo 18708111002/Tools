@@ -87,94 +87,60 @@ def handleImage(img):
 
 inputFileDir = sys.argv[1]
 outputFileDir = sys.argv[2]
-samplingTime = int(sys.argv[3])
 
-startTime = int(sys.argv[5])
-
+from PIL import Image, ImageDraw,ImageFont
 
 print("inputFileDir  : " + inputFileDir)
 print("outputFileDir : " + outputFileDir)
 videoList = []
 for videoName in os.listdir(inputFileDir):
     videoList.append(videoName)
-
+import time as pyTime
 for videoName in videoList:
-    moveVedioCmd = []
-    isCut = False
-    import time as pyTime
+
     print("Starting  processing " + videoName + " ...")
 
-    time_start = int(pyTime.time())
-    degree = int(sys.argv[4])
 
     video = cv2.VideoCapture(inputFileDir + "\\" + videoName);
     frameCount = video.get(cv2.cv.CV_CAP_PROP_FRAME_COUNT)
     fps = video.get(cv2.cv.CV_CAP_PROP_FPS)
+    print(fps)
     maxTime = frameCount / fps
+
+    size = (int(video.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)),
+            int(video.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)))
 
     # randTime = random.randint(int(startTime),int(maxTime))
     # video.set(cv2.cv.CV_CAP_PROP_POS_MSEC, randTime * 1000)  # 设置时间标记
     # rval, img = video.read()
     # cv2.imwrite(outputFileDir + "\\" + videoName.split(".")[0] + '.png', img)  # 存储为图像
+    fourcc = cv2.cv.FOURCC('D', 'I', 'V', 'X')
+    # out = cv2.VideoWriter('d:/outputvideo/output.avi', fourcc, fps, size)
 
     if video.isOpened():
+        rval = True
+        img = None
+        time_start = pyTime.time()
+        count = 0
+        while rval:  # 循环读取视频帧
+            rval, img = video.read()
+            time_end = int(pyTime.time())
+            # count = time_end - time_start
+            count += 1
 
-        while degree >= 100:
-            time = startTime
-            # # Find OpenCV version
-            major_ver = (cv2.__version__).split('.')[0]
 
-            rval = True
-            img  = None
+            cv2.putText(img, str(count), (20, 100)
+                        , cv2.FONT_HERSHEY_PLAIN, 3.0, (255, 255, 255), thickness=5)
 
-            while rval :  # 循环读取视频帧
 
-                if time < maxTime:
-                    video.set(cv2.cv.CV_CAP_PROP_POS_MSEC, time * 1000)  # 设置时间标记
-                    rval, img = video.read()
-                else:
-                    break
+            cv2.imwrite(outputFileDir + "\\" + videoName.split(".")[0] + str(count) + '.png', img)  # 存储为图像
 
-                imageVar = cv2.Laplacian(img, cv2.CV_64F) #拉普拉斯判断模糊度
-                if imageVar is not None:
-                    imageVar = imageVar.var()
-                    face_cascade = cv2.CascadeClassifier(r'.\haarcascade_frontalface_alt.xml')
-                    grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-                    # 人脸检测，1.2和2分别为图片缩放比例和需要检测的有效点数
-                    faces = face_cascade.detectMultiScale(grey, scaleFactor=1.2, minNeighbors=3, minSize=(32, 32))
-                else:
-                    imageVar = 0
-                    facess = 0
+            # out.write(img)  # 写视频帧
 
-                time_end = int(pyTime.time())
-                print((time_end - time_start))
-                if ((time_end - time_start) > 30 ):
+            # pyTime.sleep(2)
 
-                    degree = 0
-                    # video.release()
-                    break
-                    print(videoName, " processing finished !")
+            cv2.waitKey(1)
 
-                elif (imageVar > degree and len(faces) > 0):
-
-                    cv2.imwrite(outputFileDir + "\\" + videoName.split(".")[0] + '.png', img)  # 存储为图像
-                    isCut = True
-
-                    print(videoName," processing finished !")
-                    degree = 0
-                    # video.release()
-                    break
-
-                time += samplingTime
-                cv2.waitKey(1)
-
-            degree -= 100
-            video.release()
-
-        if isCut is False:
-            cmd = "del " + '"' + inputFileDir + "\\" + videoName + '"  '
-            print(cmd)
-            os.system(cmd)
 
 
 

@@ -1,0 +1,6 @@
+爬取的连接和标题
+所有视频的信息连接//li[@class = "list_item"]
+(./a[@class = "figure"]/@href)
+
+
+(./strong[@class="figure_title figure_title_two_row"]/a/title/text())
