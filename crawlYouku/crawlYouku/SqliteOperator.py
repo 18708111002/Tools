@@ -9,7 +9,6 @@ def db_get_cursor(conn, sql, condition_pair, order=None):
         sql += ' where %s' % where
         if order:
             sql = '%s order by %s' % (sql, order)
-
         cursor = conn.execute(sql, values)
     else:
         if order:
@@ -83,36 +82,31 @@ def db_table_remove(conn, table, condition_pair):
         conn.execute(sql)
     conn.commit()
 
-def db_get_results(conn,table):
-    sql = 'select * from ' + table
-    cursor = conn.cursor()
-    return cursor.execute(sql)
 
-def db_create_table(conn, table, fields_define):
+def db_create_table(conn, table, fields_define, index_fields):
     if not db_has_table(conn, table):
         conn.execute('''create table %s(%s)''' % (table, ','.join(fields_define)))
+        for index_field in index_fields:
+            conn.execute('create index idx_%s_%s on %s(%s)' % ((table, index_field) * 2))
         conn.commit()
 
 
 # if __name__ == '__main__':
-#
-#     conn = sqlite3.connect('videos')
-#     table = 'processedVideo'
-#
-#     fields = ('videoName', 'successful')
-#     db_create_table(conn, table, fields, ['videoName'])
-#
-#     rows = [fields]
-#     rows.append(('1.mp4','successful'))
-#     db_table_add_rows(conn, table, rows, ['videoName'])
-#
-#     print(db_has_table(conn, table))
-#     print(db_table_get_count(conn, table, ('videoName=?', ['1.mp5'])))
-#     print(db_table_get_count(conn, table, ('videoName=?', ['1.mp4'])))
-#
-#     results = db_get_results(conn,table)
-#     for r in results:
-#         print(r)
+
+    # conn = sqlite3.connect('video')
+    # table = 'processedVideo'
+    # fields = ('videoName', 'successful')
+    # db_create_table(conn, table, fields, 'videoName')
+    #
+    # rows = [fields]
+    # rows.append(('1.mp4','successful'))
+    # db_table_add_rows(conn, table, rows, ['videoName'])
+    #
+    # print(db_has_table(conn, table))
+    # print(db_table_get_count(conn, table, ('videoName=?', ['1.mp5'])))
+    # print(db_table_get_count(conn, table, ('videoName=?', ['1.mp4'])))
+
+
     # import unittest
     #
     #

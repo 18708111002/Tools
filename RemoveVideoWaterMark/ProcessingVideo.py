@@ -33,9 +33,7 @@ conn = sqlite3.connect('processedVideo')
 table = 'processedVideo'
 fields = ('videoName', 'successful')
 conn.text_factory=str
-
-if not db_has_table(conn, table):
-    db_create_table(conn, table, fields, 'videoName')
+db_create_table(conn, table, fields, 'videoName')
 
 for sec in sections:
     resolutionConfig[sec] = {}

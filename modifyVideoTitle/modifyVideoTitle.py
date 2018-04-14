@@ -1,22 +1,50 @@
-#encoding:utf-8
+# -*- coding: utf8 -*-
 import re
 import os
+import chardet
+import random
+from suffix import suffix
+from preffix import  preffix
+from zhon.hanzi import punctuation as pun
+import sys
 
-List =[]
+punctuation = pun + u'_'
+def deleteMinLen(list):
 
-for videoName in os.listdir('d:\inputvideo'):
-    List.append(re.split(u'@|!|\.|,|，|-|\?|_|？|！|。', videoName))
-    print(List)
+    min = list[0]
+    for i in list:
+        if len(i) < len(min):
+            min = i
 
-# rule = rule[:-1]
-# List =[]
-# with open('LIST.TXT','r') as f:
-#     for line in f:
-#         List.append(re.split(u'@|!|\.|,|，|-|\?|_|？|！|。',line))
-#
-# with open('modify.txt','w') as f:
-#     for line in List:
-#         for word in line:
-#             # f.write(line[0])
-#             f.write(word + "          ")
-#         f.write('\n')
+    list.remove(min)
+    return list
+
+inputDir = sys.argv[1]
+
+for videoName in os.listdir(inputDir):
+
+    newName = []
+
+    pre = random.sample(preffix, 1)[0]
+    suff = random.sample(suffix, 1)[0]
+    newName.append(pre)
+
+    encoding = chardet.detect(videoName)['encoding']
+    # videoName, type = os.path.splitext(videoName)
+    videoName,type = os.path.splitext(unicode(videoName, encoding,'ignore'))
+    oldName = videoName
+
+    videoName = re.sub(ur"[%s]+" %punctuation, " ", videoName).split()
+    if len(videoName) > 1:
+        newName.extend( deleteMinLen(videoName))
+    else:
+        newName.append(oldName)
+
+    newName.append(suff)
+
+    name = ",".join(newName)
+    print(inputDir + "\\" + oldName)
+    print(inputDir + "\\"+ name + type)
+
+    # os.rename(inputDir + "\\" + oldName + type, inputDir + "\\"+ name + type)
+
