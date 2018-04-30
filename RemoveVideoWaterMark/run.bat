@@ -1,1 +1,1 @@
-python VideoRoughCut.py d:\inputvideo d:\outputvideo D:\ffmpeg\bin\ffmpeg
+python VideoRoughCut.py d:\inputvideo d:\outputvideo D:\ffmpeg\bin\ffmpeg tencent

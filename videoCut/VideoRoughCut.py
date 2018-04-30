@@ -141,13 +141,13 @@ for videoName in videoList:
                     face_cascade = cv2.CascadeClassifier(r'.\haarcascade_frontalface_alt.xml')
                     grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
                     # 人脸检测，1.2和2分别为图片缩放比例和需要检测的有效点数
-                    faces = face_cascade.detectMultiScale(grey, scaleFactor=1.2, minNeighbors=3, minSize=(32, 32))
+                    faces = face_cascade.detectMultiScale(grey, scaleFactor=1.2, minNeighbors=2, minSize=(32, 32))
                 else:
                     imageVar = 0
                     facess = 0
 
                 time_end = int(pyTime.time())
-                print((time_end - time_start))
+                # print((time_end - time_start))
                 if ((time_end - time_start) > 30 ):
 
                     degree = 0

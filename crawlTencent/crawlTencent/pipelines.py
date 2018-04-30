@@ -16,10 +16,18 @@ db_create_table(conn, table, fields, ('URL'))
 conn.text_factory=str
 
 class CrawltencentPipeline(object):
+    def __init__(self):
+        self.cnt = 0
+        self.nameCnt = 1
+        self.suffix = time.strftime('%Y-%m-%d-%H-%M-%S-', time.localtime(time.time()))
+
     def process_item(self, item, Spider):
         # content = json.dumps(dict(item),ensure_ascii=False)+'\n'
         if db_table_get_count(conn, table, ('URL=?', [str(item['link'])])) == 0:
-            with open('Tencenturl ' + str(time.strftime('%Y-%m-%d-%H',time.localtime(time.time()))) + '.txt','a')as f:
+            self.cnt += 1
+            if self.cnt % 100 == 0:
+                self.nameCnt += 1
+            with open('Tencenturl ' + str(self.suffix) + str(self.nameCnt) +'.txt','a')as f:
                 rows = [fields]
                 curTime = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
                 rows.append((str(item['link']),curTime))

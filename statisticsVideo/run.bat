@@ -1,1 +1,1 @@
-python statisticsVideo.py d:\inputvideo d:\outputvideo 30  60
+python statisticsVideo.py d:\inputvideo  30  60 1

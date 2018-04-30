@@ -1,0 +1,1 @@
+D:\Python27\Scripts\scrapy crawl sogou -a query=%e7%8e%8b%e5%ae%9d%e5%bc%ba

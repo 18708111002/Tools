@@ -1,3 +1,0 @@
-//div[@class="l-item"]每一个item文件
-.//div[@class="spread-module"]/a/@href每一个视频的id号码
-.//div[@class="v-info"]/span[@class="v-info-i"]/span[1]/text()

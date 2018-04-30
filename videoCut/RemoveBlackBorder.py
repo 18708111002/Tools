@@ -6,7 +6,7 @@ tar_folder = "tar"
 backup_folder = "backup"
 
 def isCrust(pix):
-    return sum(pix) < 25
+    return sum(pix) < 50
 
 def hCheck(img, y, step = 50):
     count = 0
@@ -53,7 +53,7 @@ def handleImage(filename,tar):
     left = boundaryFinder(img, 0, width/2, vCheck)
     right = boundaryFinder(img, width-1, width/2, vCheck)
     top = boundaryFinder(img, 0, height/2, hCheck)
-    bottom = boundaryFinder(img, height-1, width/2, hCheck)
+    bottom = boundaryFinder(img, height-1, height/2, hCheck)
 
     rect = (left,top,right,bottom)
     print rect
