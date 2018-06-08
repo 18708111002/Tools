@@ -1,0 +1,5 @@
+注册dll  
+
+regsvr32 AutoItX3_x64.dll 或regsvr32 AutoitX.dll
+
+ 如果注册时报错： 模块“AutoItX3_x64.dll”已加载，但对 DllRegisterServer 的调用失败，错误代码为 0x80070005，用管理员身份调用cmd再重新执行即可

@@ -1,0 +1,1 @@
+python  chromeAuto.py d:\test 
